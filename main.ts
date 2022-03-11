@@ -11,14 +11,14 @@ input.onButtonPressed(Button.AB, function () {
     }
     if (input.temperature() > 25) {
         serial.writeLine("No agafar jaqueta")
+        basic.showLeds(`
+            # . # . #
+            . # # # .
+            # # # # #
+            . # # # .
+            # . # . #
+            `)
     }
-    basic.showLeds(`
-        # . # . #
-        . # # # .
-        # # # # #
-        . # # # .
-        # . # . #
-        `)
 })
 input.onButtonPressed(Button.B, function () {
     if (input.temperature() > 25) {
